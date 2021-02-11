@@ -24,5 +24,17 @@ namespace WPF__P_____Classes
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            EntryForm NewEntry = new EntryForm();
+            {
+                NewEntry.Name = txtName.Text;
+                NewEntry.Address = txtAddress.Text;
+                NewEntry.ZipCode = Convert.ToInt32(txtZipCode.Text);
+                
+            }
+            listListBox.Items.Add(NewEntry);
+        }
     }
 }
