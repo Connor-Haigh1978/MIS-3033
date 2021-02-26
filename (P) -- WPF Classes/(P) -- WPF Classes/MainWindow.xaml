@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_P_____WPF_Classes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="StudentInfoWindow" Height="450" Width="800">
     <Grid Background="#FFF9D68C">
         <TextBlock HorizontalAlignment="Center" Margin="0,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="408" Text="            The University of Oklahoma" FontFamily="Microsoft Uighur" FontSize="36"/>
         <TextBlock HorizontalAlignment="Left" Height="0" Margin="225,77,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
@@ -26,7 +26,9 @@
         <TextBlock HorizontalAlignment="Left" Margin="148,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="City"/><LineBreak/><Run/></TextBlock>
         <TextBox x:Name="cityBox" HorizontalAlignment="Left" Margin="148,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,354,0,0" Text="Zipcode" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ZipcodeBox" HorizontalAlignment="Left" Margin="10,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="StudentListBox" Margin="553,115,0,22" Background="{x:Null}" SelectionChanged="StudentListBox_SelectionChanged"/>
+        <Button x:Name="SubmitInfor" Content="Submit Information" HorizontalAlignment="Center" Margin="0,215,0,0" VerticalAlignment="Top" Background="Red" Height="49" Width="112" Click="SubmitInfor_Click"/>
 
     </Grid>
 </Window>
