@@ -29,6 +29,23 @@ namespace _P_____WPF_Classes
         private void SubmitInfor_Click(object sender, RoutedEventArgs e)
         {
             double GPA;
+            bool Success;
+            int streetnumber;
+            if (int.TryParse(streetNumberBox.Text, out streetnumber) == false)
+            {
+                Success = false;
+                MessageBox.Show("Enter a valid Street Number");
+            }
+            int Zip;
+            if (int.TryParse(ZipcodeBox.Text, out Zip) == false)
+            {
+                Success = false;
+                MessageBox.Show("Enter valid Zip Code");
+
+
+
+            }
+
             Student NewStudent = new Student()
             {
                 FirstName = FirstNameBox.Text,
@@ -36,9 +53,21 @@ namespace _P_____WPF_Classes
                 GPA = Convert.ToDouble(GPABox.Text),
                 Major = MajorBox.Text
             };
-
-            NewStudent.SetAddress(Convert.ToInt32(streetNumberBox.Text), streetNameBox.Text, stateBox.Text, cityBox.Text, Convert.ToInt32(ZipcodeBox.Text));
-
+            Address StudentAddress = new Address()
+            {
+                StreetNumber = streetnumber,
+                StreetName = streetNameBox.Text,
+                State = stateBox.Text,
+                City = cityBox.Text,
+                ZipCode = Zip
+            };
+            NewStudent.SetAddress(
+                streetnumber,
+                streetNameBox.Text,
+                stateBox.Text,
+                cityBox.Text,
+                Zip
+                );
             cityBox.Clear();
             FirstNameBox.Clear();
             LastNameBox.Clear();
@@ -49,19 +78,34 @@ namespace _P_____WPF_Classes
             streetNumberBox.Clear();
             ZipcodeBox.Clear();
 
+            //Address NewStudentAddress = new Address();
+            //{
+            //    NewStudentAddress.StreetNumber = streetnumber;
+            //    NewStudentAddress.StreetName = streetNameBox.Text;
+            //    NewStudentAddress.State = stateBox.Text;
+            //    NewStudentAddress.City = cityBox.Text;
+            //    NewStudentAddress.ZipCode = Zip;
+
+            //}
+            ////NewStudentAddress(streetnumber, streetNameBox.Text, stateBox.Text, cityBox.Text, Zip);
+            //NewStudent.SetAddress(NewStudentAddress);
+            
             StudentListBox.Items.Add(NewStudent);
-            //List<Address> addresses = new List<Address>();
-
-            //int streetNumber, string streetName, string state, string city, int zipcode
-
+          
 
         }
 
         private void StudentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedStudent = (Student)StudentListBox.SelectedItem;
-            var selectedAddress = (Address);
-            MessageBox.Show($"Nice job! {selectedStudent.Address}");
+           // var selectedAddress = (Address);
+            MessageBox.Show($"Nice job! {selectedStudent}");
+            ShowAddress address = new ShowAddress();
+            Address NewAddress = new Address();
+            NewAddress = selectedStudent.Address;
+            address.Setup(selectedStudent);
+            address.ShowAddressStudent(NewAddress);
+            address.Show();
         }
     }
 }

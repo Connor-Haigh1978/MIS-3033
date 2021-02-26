@@ -10,7 +10,7 @@ namespace _P_____WPF_Classes
         public string LastName { get; set; }
         public string Major { get; set; }
         public double GPA { get; set; } 
-        public AddressWindow Address { get; set; } 
+        public Address Address { get; set; } 
 
         public Student()
         {
@@ -51,7 +51,13 @@ namespace _P_____WPF_Classes
         }
         public void SetAddress(int streetNumber, string streetName, string state, string city, int zipcode)
         {
-            AddressWindow NewAddress = new AddressWindow(streetNumber, streetName, state, city, zipcode);
+            Address = new Address(streetNumber, streetName, state, city, zipcode);
+
+            Address.StreetNumber = streetNumber;
+            Address.StreetName = streetName;
+            Address.State = state;
+            Address.City = city;
+            Address.ZipCode = zipcode;
         }
         public override string ToString()
         {
@@ -60,7 +66,7 @@ namespace _P_____WPF_Classes
 
     }
 
-    public class AddressWindow
+    public class Address
     {
         public int StreetNumber {get; set;}
         public string StreetName { get; set; }
@@ -69,7 +75,7 @@ namespace _P_____WPF_Classes
         public int ZipCode { get; set; }
 
 
-        public AddressWindow()
+        public Address()
         {
             StreetNumber = 0;
             StreetName = string.Empty;
@@ -77,7 +83,7 @@ namespace _P_____WPF_Classes
             City = string.Empty;
             ZipCode = 0;
         }
-        public AddressWindow(int streetnumber, string streetname, string state, string city, int zipcode)
+        public Address(int streetnumber, string streetname, string state, string city, int zipcode)
         {
             streetnumber = StreetNumber;
             streetname = StreetName;
