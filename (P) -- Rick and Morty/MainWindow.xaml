@@ -1,0 +1,13 @@
+﻿<Window x:Class="_P_____Rick_and_Morty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_P_____Rick_and_Morty"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="https://www.adweek.com/wp-content/uploads/2019/12/pringles-rick-morty-superbowl-PAGE-2019.jpg"/>
+    </Window.Background>
+    <ListBox x:Name="CharacterListBox" Margin="0,255,0,0" Background="{x:Null}" Foreground="White" SelectionChanged="CharacterListBox_SelectionChanged"/>
+</Window>
