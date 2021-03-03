@@ -8,7 +8,7 @@
         Title="SecondWindow" Height="450" Width="800">
     <Grid>
         <Image x:Name="ImagePokemon" HorizontalAlignment="Left" Height="241" Margin="201,151,0,0" VerticalAlignment="Top" Width="395"/>
-        <TextBox x:Name="PokemonName" HorizontalAlignment="Left" Margin="257,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Height="55"/>
+        <TextBox x:Name="PokemonName" HorizontalAlignment="Left" Margin="257,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Height="55"/>
 
     </Grid>
 </Window>
