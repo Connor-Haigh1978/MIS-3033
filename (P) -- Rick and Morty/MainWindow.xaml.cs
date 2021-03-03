@@ -29,14 +29,25 @@ namespace _P_____Rick_and_Morty
 
             using (var client = new HttpClient())
             {
-                string jsonData = client.GetStringAsync("https://rickandmortyapi.com/api/character").Result;
+                string url = "https://rickandmortyapi.com/api/character";
 
-                RickAndMortyAPI api = JsonConvert.DeserializeObject<RickAndMortyAPI>(jsonData);
-
-                foreach (var character in api.results)
+                while (string.IsNullOrEmpty(url) == false)
                 {
-                    CharacterListBox.Items.Add(character);
+                    string jsonData = client.GetStringAsync(url).Result;
+
+                    RickAndMortyAPI api = JsonConvert.DeserializeObject<RickAndMortyAPI>(jsonData);
+
+                    foreach (var character in api.results)
+                    {
+                        CharacterListBox.Items.Add(character);
+                    }
+
+                    url = api.info.next;
+
                 }
+
+
+
 
             }
         }
