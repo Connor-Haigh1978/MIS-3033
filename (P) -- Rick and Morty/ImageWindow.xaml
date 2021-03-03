@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="ImageWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="119,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" FontFamily="Bahnschrift" FontSize="36"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Center" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="387" FontFamily="Bahnschrift" FontSize="36"/>
+        <Image x:Name="CharacterImage" HorizontalAlignment="Left" Height="237" Margin="21,173,0,0" VerticalAlignment="Top" Width="241"/>
 
     </Grid>
 </Window>

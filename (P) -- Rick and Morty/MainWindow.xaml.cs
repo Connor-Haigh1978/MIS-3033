@@ -43,7 +43,7 @@ namespace _P_____Rick_and_Morty
 
         private void CharacterListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            RickAndMortyAPI selectedcharacter = (RickAndMortyAPI)CharacterListBox.SelectedItem;
+            var selectedcharacter = (Character)CharacterListBox.SelectedItem;
             ImageWindow wnd = new ImageWindow();
             wnd.SetUpWindow(selectedcharacter);
             wnd.ShowDialog();

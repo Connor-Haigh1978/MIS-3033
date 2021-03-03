@@ -10,21 +10,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace _P_____Rick_and_Morty
+namespace _P_____Pokemon
 {
     /// <summary>
-    /// Interaction logic for ImageWindow.xaml
+    /// Interaction logic for SecondWindow.xaml
     /// </summary>
-    public partial class ImageWindow : Window
+    public partial class SecondWindow : Window
     {
-        public ImageWindow()
+        public SecondWindow()
         {
             InitializeComponent();
+
         }
-        public void SetUpWindow(Character Character)
+        public void Image(ResultObject Pokemon)
         {
-            NameBox.Text = Character.ToString();
-            CharacterImage.Source = new BitmapImage(new Uri(Character.image));
+            PokemonName.Text = Pokemon.ToString();
+
+            ImagePokemon.Source = new BitmapImage(new Uri(Pokemon.url));
 
         }
     }

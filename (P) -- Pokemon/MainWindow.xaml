@@ -1,0 +1,14 @@
+﻿<Window x:Class="_P_____Pokemon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_P_____Pokemon"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="CharacterList" Margin="0,140,0,0" SelectionChanged="CharacterList_SelectionChanged"/>
+        <Image x:Name="PokemonPicture" HorizontalAlignment="Left" Height="95" Margin="204,10,0,0" VerticalAlignment="Top" Width="321"/>
+
+    </Grid>
+</Window>
