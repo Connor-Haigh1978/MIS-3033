@@ -7,8 +7,13 @@
         mc:Ignorable="d"
         Title="SecondWindow" Height="450" Width="800">
     <Grid>
-        <Image x:Name="ImagePokemon" HorizontalAlignment="Left" Height="241" Margin="201,151,0,0" VerticalAlignment="Top" Width="395"/>
-        <TextBox x:Name="PokemonName" HorizontalAlignment="Left" Margin="257,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209" Height="55"/>
+        <TextBlock x:Name="Height" HorizontalAlignment="Left" Margin="10,91,0,0" Text="Height" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="116" FontFamily="Magneto" FontSize="20"/>
+        <TextBlock x:Name="Weight" HorizontalAlignment="Left" Margin="10,128,0,0" Text="Weight" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="116" FontFamily="Magneto" FontSize="20"/>
+        <TextBlock x:Name="WeightBlockAnswer" HorizontalAlignment="Left" Margin="131,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="116" FontFamily="Magneto" FontSize="20"/>
+        <TextBlock x:Name="HeightBlockAnswer" HorizontalAlignment="Left" Margin="126,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="116" FontFamily="Magneto" FontSize="20"/>
+        <TextBlock x:Name="NameBlock" HorizontalAlignment="Center" Margin="0,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Width="362" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="36"/>
+        <Image x:Name="SpriteImage" HorizontalAlignment="Left" Height="184" Margin="277,217,0,0" VerticalAlignment="Top" Width="257"/>
+        <Button x:Name="ChangeSprite" Content="Change to Back Sprite" HorizontalAlignment="Left" Margin="68,279,0,0" VerticalAlignment="Top" Height="74" Width="160" Click="ChangeSprite_Click"/>
 
     </Grid>
 </Window>
