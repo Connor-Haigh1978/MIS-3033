@@ -10,8 +10,9 @@
         <ImageBrush ImageSource="https://media.gq.com/photos/5583008609f0bee56440d085/master/pass/news-politics-blogs-death-race-chucknorris1450.jpg"/>
     </Window.Background>
     <Grid>
-        <ComboBox x:Name="CategoryBox" HorizontalAlignment="Left" Margin="84,121,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CategoryBox_SelectionChanged"/>
+        <ComboBox x:Name="CategoryBox" HorizontalAlignment="Left" Margin="84,121,0,0" VerticalAlignment="Top" Width="120" />
         <TextBlock x:Name="JokeBox" HorizontalAlignment="Left" Margin="66,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="104" Width="705" Background="#FFFFF7F7" FontFamily="Arial Black" FontSize="20"/>
+        <Button Content="Get Joke" HorizontalAlignment="Left" Margin="665,102,0,0" VerticalAlignment="Top" Height="67" Width="106" Click="Button_Click"/>
 
     </Grid>
 </Window>

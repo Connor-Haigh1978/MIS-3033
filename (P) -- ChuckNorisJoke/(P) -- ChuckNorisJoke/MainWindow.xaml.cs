@@ -36,23 +36,29 @@ namespace _P_____ChuckNorisJoke
             using (var client = new HttpClient())
             {
                 CategoryBox.Items.Add("All");
-                List<string> JsonData = new List<string>();
-
-                JsonData.Add(client.GetStringAsync(url).Result);
-
-                foreach (var item in JsonData)
+                string results = client.GetStringAsync(url).Result;
+                string[] catagories = JsonConvert.DeserializeObject<string[]>(results);
+                foreach (var item in catagories)
                 {
-                    var items = item.Split(',');
-                    foreach (var Category in items)
-                    {
-                        CategoryBox.Items.Add(Category.Trim('"', '[', ']'));
-                    }
+                    CategoryBox.Items.Add(item);
                 }
+                //List<string> JsonData = new List<string>();
+
+                //JsonData.Add(client.GetStringAsync(url).Result);
+
+                //foreach (var item in JsonData)
+                //{
+                //    var items = item.Split(',');
+                //    foreach (var Category in items)
+                //    {
+                //        CategoryBox.Items.Add(Category.Trim('"', '[', ']'));
+                //    }
+                //}
 
             }
         }
 
-        private void CategoryBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             string selection = CategoryBox.SelectedValue.ToString();
             string url;
